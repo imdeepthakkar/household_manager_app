@@ -1,40 +1,37 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./styles/GlobalStyle";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
-import Tasks from "./pages/Tasks";
-import Expenses from "./pages/Expenses";
-import Watchlist from "./pages/Watchlist";
-import Login from "./pages/Login";
-import ManageUsers from "./pages/ManageUsers";
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Signup from './components/Auth/Signup';
+import Login from './components/Auth/Login';
+import TaskList from './components/Tasks/TaskList';
+import TaskForm from './components/Tasks/TaskForm';
+import ExpenseList from './components/Expenses/ExpenseList';
+import ExpenseForm from './components/Expenses/ExpenseForm';
+import Watchlist from './components/Watchlist/Watchlist';
+import WatchlistForm from './components/Watchlist/WatchlistForm';
+import AdminDashboard from './components/Admin/AdminDashboard';
+import Header from './components/Header';
 
-const defaultTheme = {
-  primary: "#007bff", // Default blue theme
-  background: "#f4f5f7",
-  text: "#333"
-};
-
-function App() {
-  const [theme, setTheme] = useState(defaultTheme);
-
+const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Router>
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/tasks" element={<Tasks />} />
-          <Route path="/expenses" element={<Expenses />} />
-          <Route path="/watchlist" element={<Watchlist />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/manage-users" element={<ManageUsers />} />
-        </Routes>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/signup" component={Signup} />
+        <Route path="/login" component={Login} />
+        <Route path="/tasks" component={TaskList} />
+        <Route path="/add-task" component={TaskForm} />
+        <Route path="/expenses" component={ExpenseList} />
+        <Route path="/add-expense" component={ExpenseForm} />
+        <Route path="/watchlist" component={Watchlist} />
+        <Route path="/add-watchlist" component={WatchlistForm} />
+        <Route path="/admin" component={AdminDashboard} />
+        <Route path="/" exact>
+          <h2>Welcome to Household Management App</h2>
+        </Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
