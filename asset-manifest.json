@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/household_manager_app/static/js/main.311f010b.chunk.js",
+    "main.js.map": "/household_manager_app/static/js/main.311f010b.chunk.js.map",
+    "runtime-main.js": "/household_manager_app/static/js/runtime-main.db838781.js",
+    "runtime-main.js.map": "/household_manager_app/static/js/runtime-main.db838781.js.map",
+    "static/js/2.0fc7a0b8.chunk.js": "/household_manager_app/static/js/2.0fc7a0b8.chunk.js",
+    "static/js/2.0fc7a0b8.chunk.js.map": "/household_manager_app/static/js/2.0fc7a0b8.chunk.js.map",
+    "index.html": "/household_manager_app/index.html",
+    "static/js/2.0fc7a0b8.chunk.js.LICENSE.txt": "/household_manager_app/static/js/2.0fc7a0b8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db838781.js",
+    "static/js/2.0fc7a0b8.chunk.js",
+    "static/js/main.311f010b.chunk.js"
+  ]
+}
