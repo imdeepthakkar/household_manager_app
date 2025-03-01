@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm install react-router-dom
+          npm install styled-components
 
       - name: Build the app
         run: npm run build
