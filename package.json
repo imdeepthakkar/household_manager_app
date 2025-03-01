@@ -14,5 +14,6 @@
     "react-scripts": "^4.0.0",
     "gh-pages": "^3.2.3"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "homepage": "https://imdeepthakkar.github.io/household_manager_app"
 }
